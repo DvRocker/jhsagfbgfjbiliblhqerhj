@@ -467,16 +467,7 @@ client.on("message", message => {
 
 
 
-client.on('message', message => {
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('*pes15')){
- if(!message.author.id === '324672376455299074') return;
-message.channel.sendMessage('تم , جار أرسال الرسالة')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-})
+
     
             
 	     
@@ -552,7 +543,7 @@ client.on('guildMemberAdd', member => {
         })
 
 
-	
+
 client.on('message', async msg => {
       client.snek = require('snekfetch');
     var p = "*"
@@ -590,7 +581,7 @@ client.on('message', message => {
     }
 });
 
-  
+
 client.on("message", (message) => {
 if (message.content.startsWith("*ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
@@ -600,6 +591,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 }
 });
+
 
 
 client.on("message", (message) => {
@@ -647,11 +639,6 @@ client.on('message', message => {
 
 
 
-
-
-		
-		
-
 client.on('message',async msg => {
   var p = "*";
   if(msg.content.startsWith(p + "user")) {
@@ -676,7 +663,6 @@ Dat = currentTime.getDate()
 
 
 
-
 const invites = {};
 const wait = require('util').promisify(setTimeout);
 client.on('ready', () => {
@@ -698,220 +684,6 @@ client.on('guildMemberAdd', member => {
    //  yumz.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
 });
- 
-
-
- 
-const Sra7a = [
-    'صراحه  |  صوتك حلوة؟',
-    'صراحه  |  التقيت الناس مع وجوهين؟',
-    'صراحه  |  شيء وكنت تحقق اللسان؟',
-    'صراحه  |  أنا شخص ضعيف عندما؟',
-    'صراحه  |  هل ترغب في إظهار حبك ومرفق لشخص أو رؤية هذا الضعف؟',
-    'صراحه  |  يدل على أن الكذب مرات تكون ضرورية شي؟',
-    'صراحه  |  أشعر بالوحدة على الرغم من أنني تحيط بك كثيرا؟',
-    'صراحه  |  كيفية الكشف عن من يكمن عليك؟',
-    'صراحه  |  إذا حاول شخص ما أن يكرهه أن يقترب منك ويهتم بك تعطيه فرصة؟',
-    'صراحه  |  أشجع شيء حلو في حياتك؟',
-    'صراحه  |  طريقة جيدة يقنع حتى لو كانت الفكرة خاطئة" توافق؟',
-    'صراحه  |  كيف تتصرف مع من يسيئون فهمك ويأخذ على ذهنه ثم ينتظر أن يرفض؟',
-    'صراحه  |  التغيير العادي عندما يكون الشخص الذي يحبه؟',
-    'صراحه  |  المواقف الصعبة تضعف لك ولا ترفع؟',
-    'صراحه  |  نظرة و يفسد الصداقة؟',
-    'صراحه  |  ‏‏إذا أحد قالك كلام سيء بالغالب وش تكون ردة فعلك؟',
-    'صراحه  |  شخص معك بالحلوه والمُره؟',
-    'صراحه  |  ‏هل تحب إظهار حبك وتعلقك بالشخص أم ترى ذلك ضعف؟',
-    'صراحه  |  تأخذ بكلام اللي ينصحك ولا تسوي اللي تبي؟',
-    'صراحه  |  وش تتمنى الناس تعرف عليك؟',
-    'صراحه  |  ابيع المجرة عشان؟',
-    'صراحه  |  أحيانا احس ان الناس ، كمل؟',
-    'صراحه  |  مع مين ودك تنام اليوم؟',
-    'صراحه  |  صدفة العمر الحلوة هي اني؟',
-    'صراحه  |  الكُره العظيم دايم يجي بعد حُب قوي " تتفق؟',
-    'صراحه  |  صفة تحبها في نفسك؟',
-    'صراحه  |  ‏الفقر فقر العقول ليس الجيوب " ، تتفق؟',
-    'صراحه  |  تصلي صلواتك الخمس كلها؟',
-    'صراحه  |  ‏تجامل أحد على راحتك؟',
-    'صراحه  |  اشجع شيء سويتة بحياتك؟',
-    'صراحه  |  وش ناوي تسوي اليوم؟',
-    'صراحه  |  وش شعورك لما تشوف المطر؟',
-    'صراحه  |  غيرتك هاديه ولا تسوي مشاكل؟',
-    'صراحه  |  ما اكثر شي ندمن عليه؟',
-    'صراحه  |  اي الدول تتمنى ان تزورها؟',
-    'صراحه  |  متى اخر مره بكيت؟',
-    'صراحه  |  تقيم حظك ؟ من عشره؟',
-    'صراحه  |  هل تعتقد ان حظك سيئ؟',
-    'صراحه  |  شـخــص تتمنــي الإنتقــام منـــه؟',
-    'صراحه  |  كلمة تود سماعها كل يوم؟',
-    'صراحه  |  **هل تُتقن عملك أم تشعر بالممل؟',
-    'صراحه  |  هل قمت بانتحال أحد الشخصيات لتكذب على من حولك؟',
-    'صراحه  |  متى آخر مرة قمت بعمل مُشكلة كبيرة وتسببت في خسائر؟',
-    'صراحه  |  ما هو اسوأ خبر سمعته بحياتك؟',
-    '‏صراحه | هل جرحت شخص تحبه من قبل ؟',
-    'صراحه  |  ما هي العادة التي تُحب أن تبتعد عنها؟',
-    '‏صراحه | هل تحب عائلتك ام تكرههم؟',
-    '‏صراحه  |  من هو الشخص الذي يأتي في قلبك بعد الله – سبحانه وتعالى- ورسوله الكريم – صلى الله عليه وسلم؟',
-    '‏صراحه  |  هل خجلت من نفسك من قبل؟',
-    '‏صراحه  |  ما هو ا الحلم  الذي لم تستطيع ان تحققه؟',
-    '‏صراحه  |  ما هو الشخص الذي تحلم به كل ليلة؟',
-    '‏صراحه  |  هل تعرضت إلى موقف مُحرج جعلك تكره صاحبهُ؟',
-     '‏صراحه  |  هل قمت بالبكاء أمام من تُحب؟',
-    '‏صراحه  |  ماذا تختار حبيبك أم صديقك؟',
-    '‏صراحه  | هل حياتك سعيدة أم حزينة؟',
-    'صراحه  |  ما هي أجمل سنة عشتها بحياتك؟',
-    '‏صراحه  |  ما هو عمرك الحقيقي؟',
-    '‏صراحه  |  ما اكثر شي ندمن عليه؟',
-    'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
-]
-  client.on('message', message => {
-if (message.content.startsWith('*صراحه')) {
-    if(!message.channel.guild) return message.reply('** This command only for servers **');
- var client= new Discord.RichEmbed()
- .setTitle("لعبة صراحة ..")
- .setColor('RANDOM')
- .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
- .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
-                 .setTimestamp()
- 
-  message.channel.sendEmbed(client);
-  message.react("??")
-}
-});
-
-
-
-        
-			
-
- client.on('message' , najzx => {
-          var prefix = "*";
-          if(najzx.author.bot) return;
-         
-          if(najzx.content.startsWith(prefix + "rolebc")) {
-            if (!najzx.member.hasPermission("ADMINISTRATOR"))  return;
-            let args = najzx.content.split(" ").slice(1);
-         
-            if(!args[0]) {
-              najzx.channel.send("قم بمنشنة الرتبة | +rolebc @everyone الرساله")
-                return;
-            }
-            if(!args[1]) {
-              najzx.channel.send("قم بكتابة الرسالة | +rolebc @everyone الرساله")
-                return;
-            }
-         
-              if(args[0] == "@everyone") {
-                najzx.channel.send(`لقد تم ارسال هذه الرسالة الى ${najzx.guild.memberCount} اعضاء`)
-                najzx.guild.members.forEach(m => {
-                  m.send(
-                  "**" + "السيرفر :" + "\n" +
-                  `${najzx.guild.name}` + "\n" +
-                  "المرسل :" + "\n" +
-                  `${najzx.author.tag}` + "\n" +
-                  "الرسالة :" + "\n" +
-                  `${args[1]}` + "**"
-                  )
-                })
-                return;
-              }
-         
-                  var role = najzx.mentions.roles.first();
-                    if(!role) {
-                      najzx.reply("لا توجد رتبة بهذا الاسم")
-                        return;
-                    }
-                najzx.guild.members.filter(m => m.roles.get(role.id)).forEach(n => {
-                  n.send(
-                  "**" + "السيرفر :" + "\n" +
-                  `${najzx.guild.name}` + "\n" +
-                  "المرسل :" + "\n" +
-                  `${najzx.author.tag}` + "\n" +
-                  "الرسالة :" + "\n" +
-                  `${args[1]}` + "**"
-                  )
-                })
-                najzx.channel.send(`لقد تم ارسال هذه الرسالة الى ${najzx.guild.members.filter(m => m.roles.get(role.id)).size} عضو`)
-            }
-        });
-		
-		
-		client.on('message', message =>{
-    let messageArray = message.content.split(" ");
-    let cmd = messageArray[0];
-    let args = messageArray.slice(1);
-    let prefix = '*';
-
-if(cmd === `${prefix}suggest`) {
-    var suggestMessage = message.content.substring(8)
-    let suggestEMBED = new Discord.RichEmbed()
-    .setColor(3447003)
-    .setTitle("New suggest just added!!")
-    .setDescription(`**${suggestMessage}**`)
-    .setFooter(`Suggested By : ${message.author.tag}`);
-    message.delete().catch(O_o=>{}) 
-    let suggests = message.guild.channels.find(`name`, "suggests");
-    if (!suggests) return message.channel.send("You should make A **suggests** channel!")
-    suggests.send(suggestEMBED);
-}
-
-});
-
-client.on('message', message => {
-        var prefix = "*";
-          if(message.content.startsWith(prefix + 'mutevoice')) {
-          if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**❌ ").then(m => m.delete(5000));
-          if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
-           
-        if(message.mentions.users.size === 0) {
-          return message.reply("Please mention a user to mute.");
-        }
-        let muteMember = message.guild.member(message.mentions.users.first());
-        if(!muteMember) {
-          return message.reply("Try again.");
-        }
-        muteMember.setMute(true);
-        if(muteMember) {
-          message.channel.sendMessage("User muted successfully.");
-        }
-      }
-    });
-	
-
-
-
-
-
-})
-        .catch(console.error);
-  //message.delete().catch(O_o=>{}); 
- 
-}
-
-});
-
-
-
-
-
-
-
-
-
-
-client.on('message', message => {
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('*bc ever')){
- if (message.author.id !== '358529506052669440') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
-message.channel.sendMessage('جار ارسال الرسالة |✅')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
-
-
-
 
 
 
@@ -953,7 +725,7 @@ gg.send({embed : new Discord.RichEmbed()
           .setFooter(`Famous Gaming.`)
 .setTimestamp()
 });
-}        
+ }        
 })
 })
 })
@@ -963,10 +735,6 @@ gg.send({embed : new Discord.RichEmbed()
 })
  }
 })
-
-
-
-
 
 
 
