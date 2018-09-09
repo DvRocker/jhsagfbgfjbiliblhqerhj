@@ -169,6 +169,16 @@ client.on('message', message => {
 
 ❖ *server ➾ معلومات السيرفر
 
+❖ *cvt ➾ لعمل روم صوتي مؤقت
+
+❖ *ovt ➾ لالغاء الروم الصوتي
+
+❖ *setstats ➾ لعمل روم تاريخ و الوقت وعداد الفويس
+
+❖ *user ➾ لعمل روم يعطيك عدد اعضاء السيرفر
+
+❖ *invs ➾ يعطيك رابط السيرفر الذي كتبت في الامر
+
 ❖صانع البوت :! ᶠᴬᴹᴼᵁᔆᴱ | DvRocker#9148 
 
 ==================================================================
@@ -233,29 +243,23 @@ client.on('message',  message => {
  
 
 
-client.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "server") return;
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray.slice(1);
+ client.on('message',async message => {
+  if(message.content.startsWith(prefix + "server")) {
+    let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .setTitle(`\`${message.guild.name}\``)
+    .setThumbnail(message.guild.iconURL)
+    .addField('• iD:', `- ${message.guild.id}`,true)
+    .addField('• Owner:', `- ${message.guild.owner}`, true)
+    .addField('• Channels:', `\`#\` ${message.guild.channels.filter(a => a.type === 'text').size} - \`🎤\` ${message.guild.channels.filter(a => a.type === 'voice').size}`, true)
+    .addField('• Members:', `\`Count\` ${message.guild.memberCount} - \`Last\` ${Array.from(message.channel.guild.members.values()).sort((a, b) => b.joinedAt - a.joinedAt).map(m => `${m}`).splice(0, 1)}`, true)
+    .addField('• AFK Channel:', `${message.guild.afkChannel || 'None'}`, true)
+    .addField('• Other:', `\`Roles\` ${message.guild.roles.size} - \`Emojis\` ${message.guild.emojis.size} \`[\` ${message.guild.emojis.map(m => m).join(' **|** ')} \`]\``,true)
+    .addField('• Region:', `${message.guild.region}`, true);
 
-if(cmd === `${prefix}serverinfo`);
-let sicon = message.guild.displyAvatarURL;
-let serverEmbed = new Discord.RichEmbed()
-.setDescription("``Server Information``")
-.addField("Server Name", message.guild.name)
-.addField("Created On", message.guild.createdAt)
-.addField("You Joined", message.member.joinedAt)
-.addField("Total Members", message.guild.memberCount)
-.addField("Server Owner", message.guild.owner.user.username)
-.addField("Rooms", message.guild.channels.size)
-.addField("Roles", message.guild.roles.size)
-.addField("Region", message.guild.region)
-.addField("Server ID", message.guild.id);
-
-return message.channel.send(serverEmbed);
-})
+    message.channel.send(embed);
+  }
+});
 
 
 
@@ -688,7 +692,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('message', async message => {
-  if(message.content.startsWith(prefix + "تقديم")) {
+  if(message.content.startsWith(prefix + "*Submit")) {
     await message.channel.send("**حسنا,قم بكتابة اسم الرتبه**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
@@ -722,7 +726,7 @@ if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
 .setDescription(`**  الرتبه :question:  : \n ${lan}\nlماذا سوف يفعل في الرتبه :link: :\n ${md} \nالشعار :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
-          .setFooter(`Famous Gaming.`)
+          .setFooter(`Dex || Bot`)
 .setTimestamp()
 });
  }        
