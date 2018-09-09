@@ -7,7 +7,43 @@ client.on('ready', () => {
   console.log(' Bot Is Online')
   console.log('---------------')
 });
-	
+
+
+
+
+
+
+const devs = ['358529506052669440' , '' , '' , ''];
+const adminprefix = *";
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/حب بلا حدود");
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+  }
+  });
+
+
+
+
+
+
+
+
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
     let ms = client.uptime;
@@ -230,38 +266,7 @@ if (message.author.bot) return;
 
 
 
-client.on("ready", async () => {
-    if(client.guilds.size > 1) {
-        client.user.setActivity(`HI`);
-        console.log(`${client.user.username} is online on ${client.guilds.size} servers!`)
-    } else {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
-        console.log(`${client.user.username} is online on ${client.guilds.size} server!`)
-    }
-    client.user.setStatus("online");
-});
 
-client.on("guildCreate", guild => {
-    console.log("Joined a new guild: " + guild.name);
-    if(client.guilds.size > 1) {
-        client.user.setActivity(`IAM DEX BOT`);
-    } else {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
-    }
-});
-
-client.on("guildDelete", guild => {
-    console.log("Left a guild: " + guild.name);
-    if(client.guilds.size > 1) {
-        client.user.setActivity(`ADD DEX BOT TO YOUR SERVER`);
-    } else {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
-    }
-});
-
-client.on("message", async () => {
-  
-})
 
 
 
