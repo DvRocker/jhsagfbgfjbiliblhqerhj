@@ -851,6 +851,33 @@ client.on('message', async message => {
 
 
 
+client.on('message', (message) => {
+    if (message.content.startsWith('*kick')) {
+        var member= message.mentions.members.first();
+        member.kick().then((member) => {
+            message.channel.send(member.displayName + ' تم طرد هذا الشخص من السيرفر');
+        }).catch(() => {
+            message.channel.send(":x:");
+        });
+    }
+}); 
+
+
+
+
+
+
+client.on('message', (message) => {
+    if (message.content.startsWith('*ban ')) {
+      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('هذا الخاصية للدارة فقط');
+        var member= message.mentions.members.first();
+        member.ban().then((member) => {
+         message.channel.send(member.displayName + 'تم طرد هذا الشخص من السيرفر');
+        }).catch(() => {
+            message.channel.send('Error :_:');
+        });
+    }
+});
 
 
 
