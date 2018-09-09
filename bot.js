@@ -232,7 +232,7 @@ if (message.author.bot) return;
 
 client.on("ready", async () => {
     if(client.guilds.size > 1) {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        client.user.setActivity(`HI`);
         console.log(`${client.user.username} is online on ${client.guilds.size} servers!`)
     } else {
         client.user.setActivity(`Im on ${client.guilds.size} servers!`);
@@ -244,7 +244,7 @@ client.on("ready", async () => {
 client.on("guildCreate", guild => {
     console.log("Joined a new guild: " + guild.name);
     if(client.guilds.size > 1) {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        client.user.setActivity(`IAM DEX BOT`);
     } else {
         client.user.setActivity(`Im on ${client.guilds.size} servers!`);
     }
@@ -253,7 +253,7 @@ client.on("guildCreate", guild => {
 client.on("guildDelete", guild => {
     console.log("Left a guild: " + guild.name);
     if(client.guilds.size > 1) {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        client.user.setActivity(`ADD DEX BOT TO YOUR SERVER`);
     } else {
         client.user.setActivity(`Im on ${client.guilds.size} servers!`);
     }
