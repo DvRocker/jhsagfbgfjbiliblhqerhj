@@ -163,8 +163,6 @@ client.on('message', message => {
 
 ❖ *date ➾ التاريخ
 
-❖ *invs ➾ رابط دخول سيرفرك
-
 ❖ *ping ➾ عرض سرعه اتصال البوت
 
 ❖ *server ➾ معلومات السيرفر
