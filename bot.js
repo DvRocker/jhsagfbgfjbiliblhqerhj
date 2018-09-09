@@ -690,7 +690,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('message', async message => {
-  if(message.content.startsWith(prefix + "*Submit")) {
+  if(message.content.startsWith(prefix + "*تقديم")) {
     await message.channel.send("**حسنا,قم بكتابة اسم الرتبه**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
