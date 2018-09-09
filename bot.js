@@ -93,6 +93,23 @@ if (message.content.startsWith(prefix + 'perm')) {
 });
 
 
+
+client.on('message', message => {
+       if(message.content.startsWith(`${prefix}support`)){
+           if(!message.channel.guild) return message.channel.send("This Command is Just For Servers!")
+           var embed = new Discord.RichEmbed()
+           .setTitle("Support Server")
+           .setURL("رابط سيرفر السبورت حقك")
+           .setTimestamp()
+           .setColor("RANDOM")
+           message.channel.send({embed})
+       }
+   });
+
+
+
+
+
 client.on('message', function(message) {
     if(message.content.startsWith(prefix + 'roll')) {
         let args = message.content.split(" ").slice(1);
